@@ -1,5 +1,6 @@
 package br.com.framework.pages;
 
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,9 +13,9 @@ public class Metodos {
 		 if(navegador=="CHROME"|| navegador=="FIREFOX") {
 			 switch (navegador) {
 			 case "CHROME":
-				 System.setProperty("webdriver.chrome.driver","C:\\drivers\\chromedriver_win32");
+				 System.setProperty("webdriver.chrome.driver","./Driver/chromedriver.exe");
 					driver = new ChromeDriver();
-					driver.get(url);
+					driver.get("google.com");
 					driver.manage().window().maximize();
 					break;
 			 case "FIREFOX":
@@ -28,5 +29,6 @@ public class Metodos {
 				System.out.println("Opçao invalida");
 			 }
 	}
+	
 	
 }
