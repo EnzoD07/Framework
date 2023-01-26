@@ -3,6 +3,11 @@
   <groupId>br.com.enzoDiogo</groupId>
   <artifactId>FrameworkTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<suiteFile>testng.xml</suiteFile>
+  </properties>
+  
   <dependencies>
   <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 <dependency>
