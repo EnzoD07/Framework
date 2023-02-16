@@ -8,8 +8,12 @@ public class DriverUtility {
 	WebDriver driver;
 
 	public WebDriver navegador(String url) {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
 		driver.get(url);
 		driver.manage().window().maximize();
 		return driver;
